@@ -139,7 +139,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         </ul>
      </div>
 
+     <button id="unregisterButton">Unregister Service Worker</button>
 
+     <script>
+      document.getElementById('unregisterButton').addEventListener('click', function() {
+          if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  registrations.forEach(function(registration) {
+                      registration.unregister();
+                  });
+              });
+          }
+      });
+      </script>
+      
     <!--Image Slider-->
     <div class="slider-container" id="imageSliderContainer">
         <div class="slider" id="imageSlider"></div>
