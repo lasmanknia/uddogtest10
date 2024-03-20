@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <div class="instart">
 
      <div class="udnam">
-        <h2>jv v<br><span class="typing" style="color: rgb(248, 83, 12);"></span></h2>
+        <h2>Salman Anik<br><span class="typing" style="color: rgb(248, 83, 12);"></span></h2>
         <script>
               
     const text = "একটি সামাজিক উন্নয়নমূলক সংগঠন ";
@@ -128,32 +128,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         </script>
      </div>  <!-- Button for registering the service worker -->
 
-     <button id="updateButton">Update Service Worker</button>
-
-   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(registration => {
-            console.log('Service worker registered:', registration);
-          })
-          .catch(error => {
-            console.error('Service worker registration failed:', error);
-          });
-      });
-
-      // Event listener for updating service worker
-      document.getElementById('updateButton').addEventListener('click', () => {
-        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-          navigator.serviceWorker.controller.postMessage({ type: 'SKIP_WAITING' });
-          // Display a message or trigger UI update to inform the user that the update is in progress
-          console.log('Service worker update triggered.');
-        }
-      });
-    } else {
-      console.log('Service workers are not supported.');
-    }
-</script>
      <div class="udop">
         <ul>
             <li><a onclick="storeOptionCategory('Medical')" href="mainoption.html"><div><ion-icon name="medkit-outline"></ion-icon><br>স্বাস্থ্য</div></a></li>
